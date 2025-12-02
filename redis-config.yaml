@@ -1,0 +1,11 @@
+# redis-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+  namespace: redis
+data:
+  redis.conf: |
+    maxmemory 256mb
+    maxmemory-policy allkeys-lru
+
